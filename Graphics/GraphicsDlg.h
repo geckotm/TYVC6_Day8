@@ -1,8 +1,10 @@
-
+//
 // GraphicsDlg.h : header file
 //
 
 #pragma once
+
+#include "PaintDlg.h"
 
 
 // CGraphicsDlg dialog
@@ -36,4 +38,6 @@ public:
 	int m_iShape;
 	int m_iColor;
 	afx_msg void OnClickedBexit();
+private:
+	CPaintDlg m_dlgPaint;
 };

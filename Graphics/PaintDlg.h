@@ -1,5 +1,6 @@
 #pragma once
 #include "afxdialogex.h"
+
 class CPaintDlg : public CDialogEx
 {
 // Construction

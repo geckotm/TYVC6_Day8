@@ -4,6 +4,7 @@
 
 #include "stdafx.h"
 #include "Graphics.h"
+#include "PaintDlg.h"
 #include "GraphicsDlg.h"
 #include "afxdialogex.h"
 
@@ -105,7 +106,19 @@ BOOL CGraphicsDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
-	// TODO: Add extra initialization here
+	////////////////////////
+	//My code starts here //
+	////////////////////////
+
+	// Create the second dialog window
+	m_dlgPaint.Create(IDD_PAINT_DLG, this);
+
+	// Show the second dialog
+	m_dlgPaint.ShowWindow(SW_SHOW);
+
+	////////////////////////
+	//My code ends here   //
+	////////////////////////
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -158,7 +171,6 @@ HCURSOR CGraphicsDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
-
 
 
 void CGraphicsDlg::OnClickedBexit()

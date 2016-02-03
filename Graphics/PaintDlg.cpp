@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "Graphics.h"
 #include "PaintDlg.h"
+#include "GraphicsDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -21,9 +22,6 @@ void CPaintDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CPaintDlg, CDialogEx)
-	ON_WM_SYSCOMMAND()
-	ON_WM_PAINT()
-	ON_WM_QUERYDRAGICON()
 END_MESSAGE_MAP()
 
 // CPaintDlg message handlers
