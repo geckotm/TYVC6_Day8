@@ -38,6 +38,7 @@ public:
 	int m_iShape;
 	int m_iColor;
 	afx_msg void OnClickedBexit();
+	afx_msg void OnRSelection();
 private:
 	CPaintDlg m_dlgPaint;
 };

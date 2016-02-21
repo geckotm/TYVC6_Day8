@@ -72,6 +72,20 @@ BEGIN_MESSAGE_MAP(CGraphicsDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BEXIT, &CGraphicsDlg::OnClickedBexit)
+	ON_BN_CLICKED(IDC_RTPEN, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RTBRUSH, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RTBITMAP, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RSLINE, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RSCIRCLE, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RSSQUARE, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RCBLACK, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RCBLUE, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RCCYAN, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RCGREEN, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RCMAGENTA, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RCRED, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RCWHITE, &CGraphicsDlg::OnRSelection)
+	ON_BN_CLICKED(IDC_RCYELLOW, &CGraphicsDlg::OnRSelection)
 END_MESSAGE_MAP()
 
 
@@ -177,3 +191,11 @@ void CGraphicsDlg::OnClickedBexit()
 {
 	OnOK();
 }
+
+
+void CGraphicsDlg::OnRSelection()
+{
+	UpdateData(TRUE);
+
+	m_dlgPaint.Invalidate();
+};
